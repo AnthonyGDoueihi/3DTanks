@@ -12,13 +12,7 @@ public class CameraMovement : MonoBehaviour {
     private float PitchAngle;
 
     CameraArm cameraArm;
-    PlayerTankController playerTank;
-
-    private void Awake()
-    {
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
-    }
+    PlayerTankController playerTank;    
 
     // Use this for initialization
     void Start () {

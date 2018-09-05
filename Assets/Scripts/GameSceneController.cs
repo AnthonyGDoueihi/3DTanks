@@ -12,6 +12,12 @@ public class GameSceneController : MonoBehaviour {
     public Text lose;
     bool bGameEnd = false;
 
+    private void Awake()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+    }
+
     // Use this for initialization
     void Start () {
         restart.enabled = false;
@@ -21,9 +27,10 @@ public class GameSceneController : MonoBehaviour {
     }
 
     // Update is called once per frame
-    void Update () {
+    void Update()
+    {
         enemyArray = FindObjectsOfType<AITankController>();
-        if(enemyArray.Length == 0)
+        if (enemyArray.Length == 0)
         {
             YouWin();
         }
@@ -37,7 +44,13 @@ public class GameSceneController : MonoBehaviour {
 
             }
         }
-	}
+
+        if (Input.GetButtonDown("Cancel"))
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
+    }
 
     void YouWin()
     {

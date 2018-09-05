@@ -4,4 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Combat.unity
+    guid: ed81bff50d8656546ac40f69ba52bb99
+  m_configObjects: {}
